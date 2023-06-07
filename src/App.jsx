@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Hooks Import:
+import useScrollUp from "./hooks/useScrollUp.jsx";
+
+import {auth, provider} from "./firebase/firebase"
+import { signInWithPopup } from "firebase/auth";
+
+// Context Import:
+import { LoginContext } from "./context/LoginContext.js";
+
+// Styles Import:
+import styles from "./app.module.scss";
+
+import NavigationIcon from "@mui/icons-material/Navigation";
+
+// Components Import:
+import Sidebar from "./components/Sidebar";
+import Right from "./components/Right";
+
+// Routes Import:
+import Index from "./routes/Index";
+import Login from "./routes/Login";
+import Error from "./routes/Error";
+
+// Dynamic Routes:
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { scrollUp, backToTop } = useScrollUp();
+
+  const [isAuth, setIsAuth] = useState(false)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={styles.app}>
+      <LoginContext.Provider value={{isAuth, setIsAuth}}>
+        <BrowserRouter>
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <NavigationIcon
+            onClick={scrollUp}
+            sx={{ fontSize: 30, color: "white" }}
+            className={`${styles.Back_To_Top_Icon} ${
+              backToTop ? styles.Show_Back_To_Top : ""
+            }`}
+          />
+        </BrowserRouter>
+      </LoginContext.Provider>
+    </div>
+  );
 }
 
-export default App
+export default App;

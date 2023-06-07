@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "preview": "",
+        "title": "Montego Bay Yacht Club",
+        "page_link": "/mbyc",
+        "link": "https://yachtclubmobay.vercel.app",
+        "description": "Website for the Montego Bay Yacht Club. A modern touch compared to the previous website"
+    },
+    {
+        "id": 2,
+        "preview": "",
+        "title": "D&E Marine Ltd",
+        "link": "https://langford-marine.vercel.app/",
+        "page_link": "/demarine",
+        "description": "Website for D&E Marine Ltd. Clients canceled when project was on the verge of hosting."
+    },
+    {
+        "id": 3,
+        "preview": "Image",
+        "title": "Boat",
+        "page_link": "/link",
+        "link": "https://www.youtube.com",
+        "description": "Lorem ipsum dolor. Officiis vero omnis harum deserunt corrupti inventore optio, sit quisquam?"
+    }
+]

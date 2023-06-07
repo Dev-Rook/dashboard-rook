@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Home",
+        "route": "/"
+    },
+    {
+        "id": 2,
+        "name": "Projects",
+        "route": "/projects"
+    },
+    {
+        "id": 3,
+        "name": "Posts",
+        "route": "/post"
+    },
+    {
+        "id": 4,
+        "name": "Experience",
+        "route": "/xp"
+    },
+    {
+        "id": 5,
+        "name": "skills",
+        "route": "/skills"
+    },
+    {
+        "id": 6,
+        "name": "Login",
+        "route": "/login"
+    }
+]
