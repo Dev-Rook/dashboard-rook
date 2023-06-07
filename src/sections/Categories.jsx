@@ -9,6 +9,10 @@ import useScrollUp from "../hooks/useScrollUp";
 
 // Styles Import:
 import styles from "../styles/sec-styles/grid.module.scss";
+import Lstyles from "../styles/comp-styles/errorLabel.module.scss";
+
+// Component Import:
+import LoginLabel from "../components/LoginLabel";
 
 // Json Import:
 import work from "../data/work.json";
@@ -49,7 +53,10 @@ const Categories = () => {
           </div>
         </>
       ) : (
-        <p>Please Log in</p>
+        <div className={Lstyles.Content_Container}>
+        <h1 className={Lstyles.Title}>Login</h1>
+        <h3 className={Lstyles.Subtitle}>Login to access dashboard</h3>
+      </div>
       )}
     </div>
   );
