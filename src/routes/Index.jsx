@@ -1,15 +1,12 @@
 // Styles Import:
 import "../styles/global.scss";
 
-
-
 // Component Import:
 import Head from "../components/Head";
-import Billboard from "../components/Billboard"
+import Billboard from "../components/Billboard";
 
 // Section Import:
 import Categories from "../sections/Categories";
-
 
 const Index = () => {
   // Header Props:

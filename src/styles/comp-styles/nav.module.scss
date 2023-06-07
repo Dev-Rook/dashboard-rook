@@ -12,7 +12,7 @@
   height: fit-content;
   width: 1500px;
 
-//   border: 1px solid white;
+  //   border: 1px solid white;
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: rgba(36, 36, 36, 0.9);
@@ -40,15 +40,19 @@
 
       height: fit-content;
       width: fit-content;
+
+      .link {
+        cursor: pointer;
+      }
     }
 
     .imgContainer {
-        display: flex;
-        overflow: hidden;
-        height: 50px;
-        width: 50px;
-        border: 1px solid white;
-        border-radius: 50%;
+      display: flex;
+      overflow: hidden;
+      height: 50px;
+      width: 50px;
+      border: 1px solid white;
+      border-radius: 50%;
     }
   }
 }

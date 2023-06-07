@@ -22,7 +22,7 @@ const Head = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      navigate("/login");
+      navigate("/");
     });
   };
   return (
