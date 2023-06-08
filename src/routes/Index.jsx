@@ -18,7 +18,7 @@ const Index = () => {
       <Head />
       <Billboard title={title} image={image} />
       <Categories />
-      {/* <Tasks /> */}
+      <Tasks />
     </div>
   );
 };

@@ -67,9 +67,9 @@ const Tasks = () => {
                       </a>
                     </span>
                     <p className={styles.Description}>{value.description}</p>
-                    {/* {!data?.category ? (
+                    {!data?.category ? (
                       <p className={styles.Type}>{value.category}</p>
-                    ) : null} */}
+                    ) : null}
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>
