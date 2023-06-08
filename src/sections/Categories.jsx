@@ -45,12 +45,12 @@ const Categories = () => {
           </div>
           <br />
           <br />
-          <div className={"callToActionBox"}>
+          {/* <div className={"callToActionBox"}>
             <Link to={"/projects"} onClick={scrollUp}>
               <button className={"viewButton"}>Vew All</button>
             </Link>
             <StartIcon sx={{ color: "white", fontSize: 25 }} />
-          </div>
+          </div> */}
         </>
       ) : (
         <div className={Lstyles.Content_Container}>

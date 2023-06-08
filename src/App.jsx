@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Hooks Import:
 import useScrollUp from "./hooks/useScrollUp.jsx";
 
-
-
 // Context Import:
 import { LoginContext } from "./context/LoginContext.js";
 
@@ -15,10 +13,13 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 
 // Components Import:
 
-
-
 // Routes Import:
 import Index from "./routes/Index";
+import Projects from "./routes/Projects";
+import Posts from "./routes/Posts";
+import Experience from "./routes/Experience";
+import Skills from "./routes/Skills";
+import Tasks from "./routes/Tasks";
 import Login from "./routes/Login";
 import Error from "./routes/Error";
 
@@ -27,16 +28,19 @@ import Error from "./routes/Error";
 function App() {
   const { scrollUp, backToTop } = useScrollUp();
 
-  const [isAuth, setIsAuth] = useState(false)
-
-
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
     <div className={styles.app}>
-      <LoginContext.Provider value={{isAuth, setIsAuth}}>
+      <LoginContext.Provider value={{ isAuth, setIsAuth }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/xp" element={<Experience />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/tasks" element={<Tasks />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Error />} />
           </Routes>

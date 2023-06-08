@@ -22,6 +22,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 // Material UI Timeline Imports End
 
+import StartIcon from "@mui/icons-material/Start";
 import LaunchIcon from "@mui/icons-material/Launch";
 
 // Component Import:
@@ -75,6 +76,12 @@ const Tasks = () => {
               </Timeline>
             );
           })}
+          <div className={"callToActionBox"}>
+            <Link to={"/projects"} onClick={scrollUp}>
+              <button className={"viewButton"}>Vew All</button>
+            </Link>
+            <StartIcon sx={{ color: "white", fontSize: 25 }} />
+          </div>
         </>
       ) : (
         <div className={Lstyles.Content_Container}>

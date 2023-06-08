@@ -12,7 +12,7 @@
     {
         "id": 3,
         "name": "Posts",
-        "route": "/post"
+        "route": "/posts"
     },
     {
         "id": 4,

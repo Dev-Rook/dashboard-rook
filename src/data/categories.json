@@ -8,7 +8,7 @@
     {
         "id": 2,
         "name": "Posts",
-        "route": "/post",
+        "route": "/posts",
         "img": "https://pbs.twimg.com/media/FyC70IWaUAIxnx8?format=jpg&name=small"
     },
     {
