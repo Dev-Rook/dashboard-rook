@@ -15,14 +15,14 @@ import Lstyles from "../styles/comp-styles/errorLabel.module.scss";
 import LoginLabel from "../components/LoginLabel";
 
 // Json Import:
-import work from "../data/work.json";
+import categories from "../data/categories.json";
 
 import StartIcon from "@mui/icons-material/Start";
 
 const Categories = () => {
   const { singIn, isAuth, setIsAuth } = useContext(LoginContext);
 
-  const [data, setData] = useState(work);
+  const [data, setData] = useState(categories);
   const { scrollUp } = useScrollUp();
   return (
     <div className={"section"} id="work">
@@ -33,10 +33,10 @@ const Categories = () => {
           <div className={styles.contentCotainer}>
             {data?.map((value) => {
               return (
-                <Link to={value.link} key={value.id}>
+                <Link to={value.route} key={value.id}>
                   <div className={styles.card}>
                     <div className={styles.imgContainer}>
-                      <img src={value.preview} alt="" className={styles.img} />
+                      <img src={value.img} alt="" className={styles.img} />
                     </div>
                   </div>
                 </Link>

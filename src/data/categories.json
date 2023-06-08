@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Projects",
+        "route": "/projects",
+        "img": "https://pbs.twimg.com/media/FyC70IWaUAIxnx8?format=jpg&name=small"
+    },
+    {
+        "id": 2,
+        "name": "Posts",
+        "route": "/post",
+        "img": "https://pbs.twimg.com/media/FyC70IWaUAIxnx8?format=jpg&name=small"
+    },
+    {
+        "id": 4,
+        "name": "Experience",
+        "route": "/xp",
+        "img": "https://pbs.twimg.com/media/FyC70IWaUAIxnx8?format=jpg&name=small"
+    },
+    {
+        "id": 5,
+        "name": "skills",
+        "route": "/skills",
+        "img": "https://pbs.twimg.com/media/FyC70IWaUAIxnx8?format=jpg&name=small"
+    }
+]
