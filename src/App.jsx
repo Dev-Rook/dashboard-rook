@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Hooks Import:
 import useScrollUp from "./hooks/useScrollUp.jsx";
 
-import {auth, provider} from "./firebase/firebase"
-import { signInWithPopup } from "firebase/auth";
+
 
 // Context Import:
 import { LoginContext } from "./context/LoginContext.js";
@@ -15,8 +14,8 @@ import styles from "./app.module.scss";
 import NavigationIcon from "@mui/icons-material/Navigation";
 
 // Components Import:
-import Sidebar from "./components/Sidebar";
-import Right from "./components/Right";
+
+
 
 // Routes Import:
 import Index from "./routes/Index";
@@ -30,11 +29,12 @@ function App() {
 
   const [isAuth, setIsAuth] = useState(false)
 
+
+
   return (
     <div className={styles.app}>
       <LoginContext.Provider value={{isAuth, setIsAuth}}>
         <BrowserRouter>
-          <Sidebar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />

@@ -28,7 +28,7 @@ const Categories = () => {
     <div className={"section"} id="work">
       <p className={"title"}>Categories</p>
 
-      {isAuth ? (
+      {isAuth && (
         <>
           <div className={styles.contentCotainer}>
             {data?.map((value) => {
@@ -52,12 +52,7 @@ const Categories = () => {
             <StartIcon sx={{ color: "white", fontSize: 25 }} />
           </div>
         </>
-      ) : (
-        <div className={Lstyles.Content_Container}>
-        <h1 className={Lstyles.Title}>Login</h1>
-        <h3 className={Lstyles.Subtitle}>Login to access dashboard</h3>
-      </div>
-      )}
+      ) }
     </div>
   );
 };

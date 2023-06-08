@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import "../styles/global.scss";
 import styles from "../styles/comp-styles/errorLabel.module.scss";
 
@@ -9,13 +11,22 @@ import StartIcon from "@mui/icons-material/Start";
 
 const LoginLabel = ({ setIsAuth }) => {
   let navigate = useNavigate()
+
+
+
   const singIn = () => {
     signInWithPopup(auth, provider).then((result) => {
-      localStorage.setItem("isAuth", true);
+      window.localStorage.setItem("isAuth", true);
       setIsAuth(true);
       navigate("/")
     });
   };
+  
+  useEffect(() => {
+    const authCheck = window.localStorage.getItem("isAuth")
+    if (authCheck !== null) {setIsAuth(authCheck)}
+  }, [])
+
   return (
     <div className={"section"}>
       <div className={styles.Content_Container}>

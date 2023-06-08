@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { LoginContext } from "../context/LoginContext";
 
@@ -13,7 +13,7 @@ import styles from "../styles/comp-styles/nav.module.scss";
 import routes from "../data/routes.json";
 
 const Head = () => {
-  const { singIn, isAuth, setIsAuth } = useContext(LoginContext);
+  const {isAuth, setIsAuth } = useContext(LoginContext);
   const [data, setData] = useState(routes);
 
   let navigate = useNavigate();
@@ -22,9 +22,15 @@ const Head = () => {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      navigate("/");
+      navigate("/login");
     });
   };
+
+  useEffect(() => {
+    const authCheck = window.localStorage.getItem("isAuth")
+    if (authCheck !== null) {setIsAuth(authCheck)}
+  }, [])
+
   return (
     <nav className={styles.nav}>
       <div className={styles.left}></div>

@@ -7,6 +7,7 @@ import Billboard from "../components/Billboard";
 
 // Section Import:
 import Categories from "../sections/Categories";
+import Tasks from "../sections/Tasks";
 
 const Index = () => {
   // Header Props:
@@ -17,6 +18,7 @@ const Index = () => {
       <Head />
       <Billboard title={title} image={image} />
       <Categories />
+      {/* <Tasks /> */}
     </div>
   );
 };
