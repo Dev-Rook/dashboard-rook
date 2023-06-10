@@ -12,6 +12,7 @@ import styles from "./app.module.scss";
 import NavigationIcon from "@mui/icons-material/Navigation";
 
 // Components Import:
+import Head from "./components/Head.jsx";
 
 // Routes Import:
 import Index from "./routes/Index";
@@ -34,6 +35,7 @@ function App() {
     <div className={styles.app}>
       <LoginContext.Provider value={{ isAuth, setIsAuth }}>
         <BrowserRouter>
+      <Head />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/projects" element={<Projects />} />
